@@ -13,6 +13,7 @@ namespace AdapterRealExample
 
             // Создаем класс для работы с бумажным принтером
             PaperPrinter paperPrinter = new PaperPrinter();
+
             // Запускаем отрисовку на бумаге
             imageDrawer.DrawWith(paperPrinter);
 
@@ -21,6 +22,7 @@ namespace AdapterRealExample
 
             // используем адаптер
             IPrinter imagePrinter = new CanvasPainterToPrinterAdapter(canvasPainter);
+
             // Запускаем печать на холсте
             imageDrawer.DrawWith(imagePrinter);
             Console.Read();
